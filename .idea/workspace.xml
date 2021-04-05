@@ -16,10 +16,25 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5e747e6-5665-4e34-94fd-2606c68d10f6" name="Default Changelist" comment="" />
+    <list default="true" id="c5e747e6-5665-4e34-94fd-2606c68d10f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/testLogger/testKafka/testKafka" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testRegister/testEtcdOp/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testRegister/testEtcdOp/testEtcdOp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testLogger/testKafka/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/testLogger/testKafka/main.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,19 +47,24 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="D:/Golang 1.15" />
+  <component name="GOROOT" path="/usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1pcX90V2XcVFd1VaGvAvGc6LQDE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
@@ -52,9 +72,10 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
-    <property name="settings.editor.selected.configurable" value="go.autoimport" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build satanTest/testRegister/testEtcdOp">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="satanTest" />
       <working_directory value="$PROJECT_DIR$" />
@@ -64,13 +85,33 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="go build satanTest/testRegister/testEtcdOp" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="satanTest" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/testRegister/testEtcdOp/main.go" />
+      <package value="satanTest/testRegister/testEtcdOp" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build satanTest/testRegister/testEtcdOp" />
         <item itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5e747e6-5665-4e34-94fd-2606c68d10f6" name="Default Changelist" comment="" />
+      <created>1617372368931</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617372368931</updated>
+    </task>
+    <servers />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
@@ -79,11 +120,27 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -94,30 +151,15 @@
       </map>
     </environment>
   </component>
-  <component name="WindowStateProjectService">
-    <state x="2125" y="660" width="387" height="291" key="EnvironmentVariablesDialog" timestamp="1617292414148">
-      <screen x="62" y="0" width="3378" height="1440" />
-    </state>
-    <state x="2125" y="660" width="387" height="291" key="EnvironmentVariablesDialog/62.0.3378.1440@62.0.3378.1440" timestamp="1617292414148" />
-    <state width="821" height="405" key="GridCell.Tab.0.bottom" timestamp="1617355887000">
-      <screen x="62" y="0" width="3378" height="1440" />
-    </state>
-    <state width="821" height="405" key="GridCell.Tab.0.bottom/62.0.3378.1440@62.0.3378.1440" timestamp="1617355887000" />
-    <state width="821" height="405" key="GridCell.Tab.0.center" timestamp="1617355886999">
-      <screen x="62" y="0" width="3378" height="1440" />
-    </state>
-    <state width="821" height="405" key="GridCell.Tab.0.center/62.0.3378.1440@62.0.3378.1440" timestamp="1617355886999" />
-    <state width="821" height="405" key="GridCell.Tab.0.left" timestamp="1617355886999">
-      <screen x="62" y="0" width="3378" height="1440" />
-    </state>
-    <state width="821" height="405" key="GridCell.Tab.0.left/62.0.3378.1440@62.0.3378.1440" timestamp="1617355886999" />
-    <state width="821" height="405" key="GridCell.Tab.0.right" timestamp="1617355887000">
-      <screen x="62" y="0" width="3378" height="1440" />
-    </state>
-    <state width="821" height="405" key="GridCell.Tab.0.right/62.0.3378.1440@62.0.3378.1440" timestamp="1617355887000" />
-    <state x="1733" y="450" key="SettingsEditor" timestamp="1617292448084">
-      <screen x="62" y="0" width="3378" height="1440" />
-    </state>
-    <state x="1733" y="450" key="SettingsEditor/62.0.3378.1440@62.0.3378.1440" timestamp="1617292448084" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/../../pkg/mod/github.com/!shopify/sarama@v1.19.0/partitioner.go</url>
+          <line>31</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

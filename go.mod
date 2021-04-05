@@ -2,22 +2,19 @@ module satanTest
 
 go 1.15
 
+replace github.com/coreos/bbolt v1.3.4 => go.etcd.io/bbolt v1.3.4
+
+replace google.golang.org/grpc v1.29.1 => google.golang.org/grpc v1.26.0
+
 require (
-	// sarama
-	github.com/Shopify/sarama v1.19.0
-	github.com/Shopify/toxiproxy v2.1.4+incompatible // indirect
-	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/eapache/go-resiliency v1.2.0 // indirect
-	github.com/eapache/go-xerial-snappy v0.0.0-20180814174437-776d5712da21 // indirect
-	github.com/eapache/queue v1.1.0 // indirect
-	github.com/frankban/quicktest v1.11.3 // indirect
-	// tail
-	github.com/fsnotify/fsnotify v1.4.9 // indirect
-	github.com/golang/snappy v0.0.3 // indirect
+	github.com/Shopify/sarama v1.28.0
+	github.com/coreos/bbolt v1.3.4 // indirect
+	github.com/coreos/etcd v3.3.25+incompatible // indirect
+	github.com/coreos/pkg v0.0.0-20180928190104-399ea9e2e55f // indirect
+	github.com/google/uuid v1.2.0 // indirect
 	github.com/hpcloud/tail v1.0.0
-	github.com/pierrec/lz4 v2.6.0+incompatible // indirect
-	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475 // indirect
-	golang.org/x/sys v0.0.0-20210331175145-43e1dd70ce54 // indirect
-	gopkg.in/fsnotify.v1 v1.4.7 // indirect
-	gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7 // indirect; indirect'
+	github.com/prometheus/client_golang v1.10.0 // indirect
+	go.etcd.io/etcd v3.3.25+incompatible
+	go.uber.org/zap v1.16.0 // indirect
+	google.golang.org/grpc v1.29.1 // indirect
 )
