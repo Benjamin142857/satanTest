@@ -1,0 +1,18 @@
+define ERROR errMsg
+
+struct Apk {
+    name string require
+
+}
+
+func Test1 {
+    req (
+
+
+    )
+    rsp (
+        ERROR string require
+        // dsds
+        kt []string optional = "666"
+    )
+}

@@ -3,13 +3,13 @@ package main
 import (
 	"context"
 	"fmt"
-	"time"
-
 	etcd "go.etcd.io/etcd/clientv3"
+	"time"
 )
-
-var etcdServerPool []string = []string{
-	"benjamin142857.ticp.vip:56800",
+var etcdReqTimeout = 5*time.Second
+var etcdServerPool = []string{
+	"192.168.3.121:9092",
+	//"benjamin142857.ticp.vip:56800",
 }
 
 
@@ -108,11 +108,68 @@ func testWatch(ctx context.Context, k string) {
 	}
 }
 
-func main() {
-	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
-	testWatch(ctx, "goTest")
-	cancel()
+func testPutLease(k, v string) {
+	client, err := etcd.New(etcd.Config{
+		Endpoints:   etcdServerPool,
+		DialTimeout: 5 * time.Second,
+	})
+	if err != nil {
+		fmt.Println("client conn fail: ", err)
+		return
+	}
+	defer func(){ _ = client.Close() }()
+	fmt.Println("client conn succ.")
 
+	kv := etcd.NewKV(client)
+	lease := etcd.NewLease(client)
+
+	// 设置租约
+	ctx1, cancel := context.WithTimeout(context.TODO(), etcdReqTimeout)
+	leaseRsp, err := lease.Grant(ctx1, 5)
+	if err != nil {
+		fmt.Println("lease.Grant fail: ", err)
+		return
+	}
+	cancel()
+	fmt.Println("leaseId: ", leaseRsp.ID)
+
+	// put
+	ctx2, cancel := context.WithTimeout(context.TODO(), etcdReqTimeout)
+	_, err = kv.Put(ctx2, k, v, etcd.WithLease(leaseRsp.ID))
+	if err != nil {
+		fmt.Println("kv.Put fail: ", err)
+		return
+	}
+
+	// 定时续期租约
+	for i:=0; i<10; i++ {
+		ctx, cancel := context.WithTimeout(context.TODO(), etcdReqTimeout)
+		keepRsp, err := lease.KeepAliveOnce(ctx, leaseRsp.ID)
+		if err != nil {
+			fmt.Println("leaseRsp.ID keepAlive fail: ", err)
+			return
+		}
+		cancel()
+		fmt.Printf("leaseId: %v, ttl: %v\n", keepRsp.ID, keepRsp.TTL)
+		time.Sleep(2*time.Second)
+	}
+}
+
+func testUint16(n uint16) {
+	fmt.Println(n)
+}
+
+func WriteStProto() {
+
+}
+
+func main() {
+	testUint16(123)
+	//ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	//testWatch(ctx, "goTest")
+	//cancel()
+
+	//testPutLease("goTest", "kkoouu")
 
 
 	//for i:=0; i<20; i++ {
